@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Montserrat');
+
+body {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+fieldset {
+  border: none;
+  width: 100% !important;
+  padding: 0;
+  margin: 0 !important;
+}
+
+form {
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+}
+
+form * {
+  display: block;
+  width: fit-content;
+  margin: 15px auto;
+}
+
+input[type="submit"] {
+  font-size: 1.5em;
+  padding: 40px;
+}
+
+input[type="text"] {
+  font-size: 1em;
+  max-width: 300px;
+  height: 25px;
+  text-align: center;
+  outline: none;
+  width: 80%;
+}
+
+.congratulations {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  font-family: 'Dancing Script', handwriting;
+  font-size: 4em;
+  color: white;
+  text-shadow: 0 0 14px black;
+}
+
+#background {
+  user-select: none;
+  z-index: -100;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.code {
+  background-color: #f7f7f7;
+  padding: 5px 10px;
+}
+
+.code, .code main {
+  border-radius: 3px;
+  border: 2px solid #757575;
+}
+
+.code h1 {
+  margin: 10px 0;
+}
+
+.code main {
+  background-color: white;
+  white-space: pre-wrap;
+  text-align: left;
+}

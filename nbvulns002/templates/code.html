@@ -1,0 +1,17 @@
+<div class="code">
+  <h1>Vulnerable Code</h1>
+  <h3>card.html</h3>
+  <main>
+    &lt;h1 class="congratulations"&gt;{message}&lt;/h1&gt;
+    &lt;img src="/static/happybirthday.jpg" id="background"&gt;
+  </main>
+  <h3>app.py</h3>
+  <main>
+  @app.route("/")
+  def index():
+      if 'name' in request.args and len(request.args['name']) > 0:
+          message = Jinja2.from_string('Happy Birthday to ' + request.args['name'] + '!').render().title()
+          return render_template('card.html', message=message)
+      return render_template('index.html')
+  </main>
+</div>

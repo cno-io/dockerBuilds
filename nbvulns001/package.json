@@ -1,0 +1,18 @@
+{
+  "name": "ssrf-node",
+  "version": "1.0.0",
+  "description": "SSRF Vulnerable Node App",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "CalebBlack@Stage2Sec",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^1.6.0",
+    "fastify-static": "^0.12.0",
+    "request": "^2.87.0",
+    "yargs": "^11.0.0"
+  }
+}

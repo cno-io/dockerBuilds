@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  /* background-color: ghostwhite; */
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #466b8a;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+img.profile-image {
+  max-width: 50%;
+  border-radius: 5px;
+  border: 2px solid #2889f163;
+  user-select: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.skill-list {
+  list-style: circle;
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto;
+}
+.skill-list li {
+  width: fit-content;
+}
+.skill-list li:not(:first-child) {
+  border-top: 1px dotted;
+  margin-top: 6px;
+  padding-top: 4px;
+}
+
+main {
+  border: 2px solid #eaeaea;
+  background-color: white;
+  padding-bottom: 20px;
+  width: 80%;
+  margin: 10% auto 0 auto;
+  max-height: 70vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.background {
+  position: absolute;
+  top: 50vw;
+  left: 50vw;
+  min-width: 100vw;
+  min-height: 100vh;
+  transform: translate(-50vw, -50vw);
+  z-index: -100;
+  filter: blur(1px) saturate(50%);
+}
