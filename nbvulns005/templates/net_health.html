@@ -1,0 +1,63 @@
+<!doctype html>
+<head>
+    <title>Lizard Blue Network Health Checkerr</title>
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.gif') }}">
+</head>
+<body style="padding-top:4.5rem">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark mb-4">
+      <a class="navbar-brand" href="#">Lizard Blue</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+
+    <main role="main" class="container">
+      <div class="jumbotron">
+        <h1>Network Health Checker</h1>
+      <form action="/net_health">
+          <div>
+          <select id="commandSelect" class="custom-select" name="cmd" onchange="updateCommand(this.value)">
+              <option selected>Command</option>
+              <option value="ping -c 4 www.example.com">ping</option>
+              <option value="netstat -ant">netstat</option>
+              <option value="ifconfig">ifconfig</option>
+            </select>
+              <p>
+                  Command to be executed: <code id="commandLine"></code>
+              </p>
+          </div>
+          <button class="btn btn-primary" type="submit">Execute</button>
+      </form>
+      <br />
+          {%  if results %}
+                <div>
+                    <textarea style="width: 100%; height: 500px">
+{{ results}}
+                    </textarea>
+                </div>
+        {% endif %}
+
+        {% if error %}
+            {{ error_message }}
+        {% endif %}
+      </div>
+    </main>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="view-source:https://getbootstrap.com/docs/4.0/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js"></script>
+<script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
+<script>
+    function updateCommand(cmd) {
+        $("#commandLine").text(cmd)
+    }
+
+    $(document).ready(function() {
+        cmd = "{{ cmd }}";
+        if (cmd !== "None") {
+            document.getElementById("commandSelect").value = cmd
+        }
+    })
+</script>

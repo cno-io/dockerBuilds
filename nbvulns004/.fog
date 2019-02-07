@@ -1,0 +1,1 @@
+default: softlayer_username: example-username softlayer_api_key: 1a1a...iLoveFlags!...1a1a softlayer_default_domain: example.com softlayer_cluster: cluster # needed for storage access
