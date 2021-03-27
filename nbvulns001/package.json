@@ -10,7 +10,7 @@
   "author": "CalebBlack@Stage2Sec",
   "license": "ISC",
   "dependencies": {
-    "fastify": "^1.6.0",
+    "fastify": "^2.15.1",
     "fastify-static": "^0.12.0",
     "request": "^2.87.0",
     "yargs": "^11.0.0"
