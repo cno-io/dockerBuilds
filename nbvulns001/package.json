@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "fastify": "^1.6.0",
-    "fastify-static": "^0.12.0",
+    "fastify-static": "^4.2.4",
     "request": "^2.87.0",
     "yargs": "^11.0.0"
   }
